@@ -2,7 +2,7 @@ describe("Numeros Romanos", function() {
   
 
   it(" When the number is one", function() {
-    const number = 1;
+    const number = "I";
 
     const result = tipeNumber(number)
 
@@ -12,3 +12,12 @@ describe("Numeros Romanos", function() {
   });
 
 });
+
+
+function tipeNumber(number){
+
+let result = number.toLowerCase()
+  if(result === 'i'){
+    return 1
+  }
+}
