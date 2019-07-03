@@ -29,5 +29,7 @@ let result = number.toLowerCase()
   if(result === 'i'){
     return 1;
   }
-  
+  else if( result === 'v'){
+    return 5;
+  }
 }
