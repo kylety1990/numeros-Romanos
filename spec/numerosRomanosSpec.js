@@ -10,6 +10,15 @@ describe("Numeros Romanos", function() {
 
     
   });
+  it(" When the number is five", function() {
+    const number = "V";
+
+    const result = tipeNumber(number)
+
+    expect(result).toEqual(5);
+
+    
+  });
 
 });
 
@@ -18,6 +27,7 @@ function tipeNumber(number){
 
 let result = number.toLowerCase()
   if(result === 'i'){
-    return 1
+    return 1;
   }
+  
 }
