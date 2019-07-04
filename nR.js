@@ -38,7 +38,10 @@ function tipeNumber(number){
         
         result.push(1000)
         
-      }  
+      }
+      else{
+        return false
+      }
     } 
     return result;
     }
@@ -99,16 +102,30 @@ function tipeNumber(number){
         else {
             return resultCorrect;
         }
-        console.log(resultCorrect)
-        console.log(resultIncorrect)
+        
         
     }
 
-    let number = "Xii"
-    //console.log(equal(number))
-    //console.log(tipeNumber("l"))
+   
+    function sumNumberArabic(number){
+      if(number === false){
+        return false;
+      }
+      else{
+      const suma = number.reduce(function(a, b){
+        return a + b
+
+      })
+        return suma;
+      }
+    }
+    let number = "xi"
+    
+   
     let toma = isCorrect(number);
     console.log(toma)
     let vamos= tipeNumber(toma)
     console.log(vamos)
-    
+    let casi = sumNumberArabic(vamos)
+
+    console.log(casi)

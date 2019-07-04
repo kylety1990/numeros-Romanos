@@ -22,11 +22,11 @@ describe("Numeros Romanos", function() {
  
   it("two numbers are added", function() {
     
-    const number = ['x','i'];
+    const number = [10,1];
 
     const result = sumNumberArabic(number)
 
-    expect(result).toEqual([11]);
+    expect(result).toEqual(11);
 
   });
 });
@@ -136,3 +136,14 @@ function tipeNumber(number){
   return result;
   }
 
+    
+    
+  function sumNumberArabic(number){
+        
+    const suma = number.reduce(function(a, b){
+      return a + b
+
+    })
+      return suma;
+    }
+  
