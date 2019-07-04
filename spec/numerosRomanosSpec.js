@@ -10,7 +10,7 @@ describe("Numeros Romanos", function() {
 
     
   });
-  it(" When the number is five", function() {
+  it("When the number is five", function() {
     const number = "V";
 
     const result = tipeNumber(number)
@@ -20,7 +20,7 @@ describe("Numeros Romanos", function() {
     
   });
 
-  it("define all the numbers", function() {
+  it("Define all the numbers", function() {
     const number = "M";
 
     const result = tipeNumber(number)
@@ -29,6 +29,17 @@ describe("Numeros Romanos", function() {
 
     
   });
+  
+  it("Some number of the chain is incorrect", function() {
+    const number = "xii";
+
+    const result = isCorrect(number)
+
+    expect(result).toEqual('xii');
+
+    
+  });
+ 
 });
 
 
@@ -55,5 +66,8 @@ let result = number.toLowerCase()
   }
   else if(result === 'm'){
     return 1000;
+  }
+  else{
+    return 'incorrect number'
   }
 }
