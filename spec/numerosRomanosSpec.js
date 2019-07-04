@@ -29,6 +29,16 @@ describe("Numeros Romanos", function() {
     expect(result).toEqual(11);
 
   });
+  
+  it("numbers that change their value", function() {
+    
+    const number = [1,10];
+
+    const result = sumNumberArabic(number)
+
+    expect(result).toEqual([-1,10]);
+
+  });
 });
 
 
