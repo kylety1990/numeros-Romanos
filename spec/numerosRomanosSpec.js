@@ -1,34 +1,5 @@
 describe("Numeros Romanos", function() {
   
-
-  it(" When the number is one", function() {
-    const number = "I";
-
-    const result = tipeNumber(number)
-
-    expect(result).toEqual(1);
-
-    
-  });
-  it("When the number is five", function() {
-    const number = "V";
-
-    const result = tipeNumber(number)
-
-    expect(result).toEqual(5);
-
-    
-  });
-
-  it("Define all the numbers", function() {
-    const number = "M";
-
-    const result = tipeNumber(number)
-
-    expect(result).toEqual(1000);
-
-    
-  });
   
   it("Some number of the chain is incorrect", function() {
     const number = "xii";
@@ -39,38 +10,20 @@ describe("Numeros Romanos", function() {
 
     
   });
+
+  it("convert the numbers to arabicas", function() {
+    
+    const number = ['x','i'];
+
+    const result = tipeNumber(number)
+
+    expect(result).toEqual([10,1]);
+
+    
+  });
  
 });
 
-
-function tipeNumber(number){
-
-let result = number.toLowerCase()
-  if(result === 'i'){
-    return 1;
-  }
-  else if( result === 'v'){
-    return 5;
-  }
-  else if( result === 'x'){
-    return 10;
-  }
-  else if( result === 'l'){
-    return 50;
-  }
-  else if( result === 'c'){
-    return 100;
-  }
-  else if (result === 'd'){
-    return 500;
-  }
-  else if(result === 'm'){
-    return 1000;
-  }
-  else{
-    return 'incorrect number'
-  }
-}
 
 function equal(number){
   let result = number.toLowerCase()
@@ -131,4 +84,49 @@ function isCorrect(number){
   
 }
 
+
+function tipeNumber(number){
+    
+  let result = []
+
+  for(let i = 0; i < number.length ; i++){
+
+    if(number[i] === 'i'){
+      
+      result.push(1)
+      
+    }
+    else if(number[i] === 'v'){
+      
+      result.push(5)
+      
+    }
+    else if(number[i] === 'x'){
+      
+      result.push(10)
+      
+    }
+    else if(number[i] === 'l'){
+      
+      result.push(50)
+      
+    }
+    else if(number[i] === 'c'){
+      
+      result.push(100)
+      
+    }
+    else if (number[i] === 'd'){
+      
+      result.push(500)
+      
+    }
+    else if(number[i] === 'm'){
+      
+      result.push(1000)
+      
+    }  
+  } 
+  return result;
+  }
 
