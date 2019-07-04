@@ -7,7 +7,6 @@ describe("Numeros Romanos", function() {
     const result = isCorrect(number)
 
     expect(result).toEqual(['x','i','i']);
-
     
   });
 
@@ -18,10 +17,18 @@ describe("Numeros Romanos", function() {
     const result = tipeNumber(number)
 
     expect(result).toEqual([10,1]);
-
     
   });
  
+  it("two numbers are added", function() {
+    
+    const number = ['x','i'];
+
+    const result = sumNumberArabic(number)
+
+    expect(result).toEqual([11]);
+
+  });
 });
 
 
@@ -83,7 +90,6 @@ function isCorrect(number){
   }
   
 }
-
 
 function tipeNumber(number){
     
