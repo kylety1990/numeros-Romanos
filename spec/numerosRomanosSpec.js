@@ -34,7 +34,7 @@ describe("Numeros Romanos", function() {
     
     const number = [1,10];
 
-    const result = sumNumberArabic(number)
+    const result = changeValue(number)
 
     expect(result).toEqual([-1,10]);
 
@@ -157,3 +157,17 @@ function tipeNumber(number){
       return suma;
     }
   
+    function changeValue(number){
+
+      let result= [];
+      for(let i=0; i<number.length;i++){
+        if(number[i] < number[i+1]){
+         result.push(number[i]-(number[i]*2));
+         
+        }else{
+          result.push(number[i]) 
+        }
+
+      }
+      return result
+    }

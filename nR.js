@@ -119,13 +119,31 @@ function tipeNumber(number){
         return suma;
       }
     }
-    let number = "xi"
+
+    function changeValue(number){
+
+      let result= [];
+      for(let i=0; i<number.length;i++){
+        if(number[i] < number[i+1]){
+         result.push(number[i]-(number[i]*2));
+         
+        }else{
+          result.push(number[i]) 
+        }
+
+      }
+      return result
+    }
+    let number = "xic"
     
    
     let toma = isCorrect(number);
     console.log(toma)
     let vamos= tipeNumber(toma)
     console.log(vamos)
-    let casi = sumNumberArabic(vamos)
+    let tomate= changeValue(vamos)
+    console.log(tomate)
+    let casi = sumNumberArabic(tomate)
 
     console.log(casi)
+
