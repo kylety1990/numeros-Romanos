@@ -31,15 +31,15 @@ describe("Numeros Romanos", function() {
     });
 
 
-    // it("when subtracting Roman numerals", function() {
+    it("when subtracting Roman numerals", function() {
 
-    //     const number = [1, 10];
+        const number = [1, 10];
 
-    //     const result = subtractNumbers(number)
+        const result = sumNumberArabic(number)
 
-    //     expect(result).toEqual([9]);
+        expect(result).toEqual([9]);
 
-    // });
+    });
 });
 
 
