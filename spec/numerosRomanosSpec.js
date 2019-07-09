@@ -139,10 +139,12 @@ function sumNumberArabic(number) {
     for (let i = 0; i < number.length; i++) {
         if (number[i] > number[i + 1]) {
             number[i + 1] += number[i];
-            number.shift()
+            number.shift();
             return number
         } else {
-
+            number[i + 1] -= number[i];
+            number.shift();
+            return number
         }
     }
 }
